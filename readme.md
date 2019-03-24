@@ -44,7 +44,6 @@ GET - ``/api/v0.1/users``
 
 ### Examples
 
-``curl localhost:3000/api/v0.1/users``
+``~/api/v0.1/users?search=well&sort=email&order=desc``
 
-
-``curl localhost:3000/api/v0.1/users?search=well&sort=email&order=desc``
+``~/api/v0.1/users?from=10&limit=50``
