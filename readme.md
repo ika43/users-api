@@ -1,5 +1,4 @@
 ## _Users API_
-------
 
 GET - ``/api/v0.1/users``
 
