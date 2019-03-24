@@ -1,14 +1,13 @@
 // * import all dependencies
 const express = require('express');
-const config = require('config');
 const mongoose = require('mongoose');
+require('dotenv').config();
 
 // * load routes
 const userRouter = require('./api/user/user.routes');
 
 // * connect to database
-const dbConfig = config.get('db.dbConfig');
-mongoose.connect(dbConfig, { useNewUrlParser: true, useCreateIndex: true }, (error) => {
+mongoose.connect(process.env.DB, { useNewUrlParser: true, useCreateIndex: true }, (error) => {
   if (error) {
     console.error('Mongo error', error);
   } else {

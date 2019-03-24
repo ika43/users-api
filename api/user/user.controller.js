@@ -1,4 +1,3 @@
-const logger = require('winston');
 const { getUsers } = require('./user.service');
 
 exports.list = async (req, res) => {
