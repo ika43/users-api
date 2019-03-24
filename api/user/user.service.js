@@ -39,6 +39,8 @@ exports.getUsers = async (search = "", sort = { created: -1 }, limit, from = 0) 
           name: { $concat: ["$firstname", " ", "$lastname"] },
           email: 1,
           created: { $dateToString: { format: "%Y-%m-%d %H:%M:%S", date: "$createdAt" } },
+          address: 1,
+          phone: 1
         }
       },
       {

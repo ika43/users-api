@@ -45,7 +45,6 @@ exports.list = async (req, res) => {
     const users = await getUsers(search, sort, limit, from);
     return res.json({ users })
   } catch (e) {
-    logger.error(e)
     return res.stats(500).send({ 'error': 'Internal server error!' })
   }
 }

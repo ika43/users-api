@@ -1,6 +1,7 @@
 // * import all dependencies
 const express = require('express');
 const mongoose = require('mongoose');
+var logger = require('morgan');
 require('dotenv').config();
 
 // * load routes
@@ -18,6 +19,7 @@ mongoose.connect(process.env.DB, { useNewUrlParser: true, useCreateIndex: true }
 
 const app = express();
 
+app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
