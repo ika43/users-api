@@ -2,17 +2,9 @@
 const express = require('express');
 const config = require('config');
 const mongoose = require('mongoose');
-//const winston = require('winston');
 
 // * load routes
 const userRouter = require('./api/user/user.routes');
-
-// * setup winston logger 
-//winston.configure({
-//  transports: [
-//    new winston.transports.File({ filename: `${__dirname}/log/errors.log` })
-//  ]
-//});
 
 // * connect to database
 const dbConfig = config.get('db.dbConfig');
